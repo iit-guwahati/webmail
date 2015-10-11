@@ -1,19 +1,19 @@
 {
-  "name": "RainLoop",
-  "title": "RainLoop Webmail",
+  "name": "Webmail",
+  "title": "IIT Guwahati Webmail",
   "version": "1.9.3",
   "release": "363",
-  "description": "Simple, modern & fast web-based email client",
-  "homepage": "http://rainloop.net",
+  "description": "web-based email client for IIT Guwahati",
+  "homepage": "http://webmail.iitg.ernet.in",
   "main": "gulpfile.js",
   "author": {
-    "name": "RainLoop Team",
-    "email": "support@rainloop.net",
-    "web": "http://rainloop.net"
+    "name": "Coding Club, IIT Guwahati",
+    "email": "codingclubiitg@gmail.com",
+    "web": "https://github.com/iit-guwahati"
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/RainLoop/rainloop-webmail.git"
+    "url": "https://github.com/iit-guwahati/rainloop-webmail.git"
   },
   "licenses": [
     {
