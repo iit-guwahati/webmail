@@ -45,11 +45,11 @@ Options -Indexes
 			define('APP_DUMMY', '********');
 			define('APP_DEV_VERSION', '0.0.0');
 			define('APP_GOOGLE_ACCESS_TOKEN_PREFIX', ':GAT:');
-			define('APP_WEB_SITE', 'http://www.rainloop.net/');
-			define('APP_API_PATH', 'http://api.rainloop.net/');
-			define('APP_STATUS_PATH', 'http://status.rainloop.net/');
-			define('APP_REPOSITORY_PATH', 'http://repository.rainloop.net/v1/');
-			define('APP_REPO_CORE_FILE', 'http://repository.rainloop.net/v2/core.{{channel}}.json');
+			define('APP_WEB_SITE', 'http://webmail.dev/');
+			define('APP_API_PATH', 'http://api.webmail.dev/');
+			define('APP_STATUS_PATH', 'http://status.webmail.dev/');
+			define('APP_REPOSITORY_PATH', 'http://repository.webmail.dev/v1');
+			define('APP_REPO_CORE_FILE', 'http://repository.webmail.dev/v2/core.{{channel}}.json');
 
 			$sCustomDataPath = '';
 			$sCustomConfiguration = '';
@@ -160,13 +160,15 @@ Options -Indexes
 					@mkdir(APP_PRIVATE_DATA, 0755, true);
 				}
 
-				foreach (array('logs', 'cache', 'configs', 'plugins', 'storage') as $sName)
+				foreach (array('logs', 'cache', 'configs', 'storage') as $sName)
 				{
 					if (!@is_dir(APP_PRIVATE_DATA.$sName))
 					{
 						@mkdir(APP_PRIVATE_DATA.$sName, 0755, true);
 					}
 				}
+
+				@copy(APP_VERSION_ROOT_PATH.'app/plugins', APP_PRIVATE_DATA.'app/plugins');
 
 				if (!@file_exists(APP_PRIVATE_DATA.'domains/disabled'))
 				{

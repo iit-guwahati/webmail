@@ -59,8 +59,8 @@ class Application extends \RainLoop\Config\AbstractConfig
 
 			'webmail' => array(
 
-				'title'							=> array('RainLoop Webmail', 'Text displayed as page title'),
-				'loading_description'			=> array('RainLoop', 'Text displayed on startup'),
+				'title'							=> array('IIT Guwahati Webmail', 'Text displayed as page title'),
+				'loading_description'			=> array('IIT Guwahati', 'Text displayed on startup'),
 				'favicon_url'					=> array('', ''),
 
 				'theme'							=> array('Default', 'Theme used by default'),
@@ -69,14 +69,14 @@ class Application extends \RainLoop\Config\AbstractConfig
 
 				'language'						=> array('en', 'Language used by default'),
 				'language_admin'				=> array('en', 'Admin Panel interface language'),
-				'allow_languages_on_settings'	=> array(true, 'Allow language selection on settings screen'),
+				'allow_languages_on_settings'	=> array(false, 'Allow language selection on settings screen'),
 
-				'allow_additional_accounts'		=> array(true, ''),
-				'allow_additional_identities'	=> array(true, ''),
+				'allow_additional_accounts'		=> array(false, ''),
+				'allow_additional_identities'	=> array(false, ''),
 
 				'messages_per_page'		=> array(20, ' Number of messages displayed on page by default'),
 
-				'attachment_size_limit'	=> array(25,
+				'attachment_size_limit'	=> array(10,
 					'File size limit (MB) for file upload on compose screen
 0 for unlimited.')
 			),
@@ -161,11 +161,11 @@ class Application extends \RainLoop\Config\AbstractConfig
 
 				'default_domain' => array('', ''),
 
-				'allow_languages_on_login' => array(true,
+				'allow_languages_on_login' => array(false,
 					'Allow language selection on webmail login screen'),
 
 				'determine_user_language' => array(true, ''),
-				'determine_user_domain' => array(false, ''),
+				'determine_user_domain' => array(true, ''),
 
 				'welcome_page' => array(false, ''),
 
@@ -183,8 +183,8 @@ Values:
 			),
 
 			'plugins' => array(
-				'enable'		=> array(false, 'Enable plugin support'),
-				'enabled_list'	=> array('', 'List of enabled plugins'),
+				'enable'		=> array(true, 'Enable plugin support'),
+				'enabled_list'	=> array('auth', 'white-list', 'List of enabled plugins'),
 			),
 
 			'defaults' => array(
