@@ -29,12 +29,8 @@
                       data-bind="submit: submitForm, css: {'errorAnimated': formError, 'welcome-off': welcome}">
                     {{INCLUDE/TopControlGroup/PLACE}}
                     <div class="controls plugin-mark-Login-TopControlGroup">
-                        <select name="RainLoopEmailServer" class="i18n input-block-level selector">
-                            <option value="dikrong.iitg.ernet.in">Dikrong</option>
-                            <option value="disang.iitg.ernet.in">Disang</option>
-                            <option value="naambor.iitg.ernet.in">Naambor</option>
-                            <option value="tamdil.iitg.ernet.in">Tamdil</option>
-                            <option value="teesta.iitg.ernet.in">Tamdil</option>
+                        <select name="RainLoopEmailServer" class="i18n input-block-level selector"
+                                data-bind="options: domains, optionsText: 'text', value: domain">
                         </select>
                     </div>
                     <div class="controls plugin-mark-Login-TopControlGroup"
